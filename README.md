@@ -31,3 +31,6 @@ Currently it's set to display `whateverTheSiteTitleIs_` (with an underscore at t
 
 ### Update time:
 The variable `self.update_freq` in the  `__init__` function specifies how long it takes before it will see currently open sites again. You can adjust to your liking if you want it to update more/less frequently.
+
+### rpc.py
+The repo contains file `rpc.py` forked by [Suclearnub](https://github.com/suclearnub/python-discord-rpc) from the original [Snazzah](https://github.com/Snazzah/SublimeDiscordRP).
