@@ -1,4 +1,4 @@
-# FirefoxDiscordPresence
+## FirefoxDiscordPresence
 Show currently open websites in Discord using Rich Presence
 
 ### Requirements:
