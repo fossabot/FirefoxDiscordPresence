@@ -4,6 +4,7 @@
 ![Twitter Rich Presence](https://i.imgur.com/sy7JALQ.png)
 ![Reddit Rich Presence](https://i.imgur.com/aCFSMP5.png)
 ![Twitter Rich Presence Image](https://i.imgur.com/QwsKCiK.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBenTearzz%2FFirefoxDiscordPresence.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBenTearzz%2FFirefoxDiscordPresence?ref=badge_shield)
 
 ### Requirements:
 * lz4 (You can install it by using: `pip install lz4`)
@@ -57,3 +58,7 @@ The variable `self.update_freq` in the  `__init__` function specifies how long i
 
 ### Credit:
 The repo contains file `rpc.py` forked by [Suclearnub](https://github.com/suclearnub/python-discord-rpc) from ["Sublime Discord Rich Presence"](https://github.com/Snazzah/SublimeDiscordRP) made by [Snazzah](https://github.com/Snazzah).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBenTearzz%2FFirefoxDiscordPresence.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FBenTearzz%2FFirefoxDiscordPresence?ref=badge_large)
