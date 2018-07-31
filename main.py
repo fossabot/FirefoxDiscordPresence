@@ -30,25 +30,29 @@ class FirefoxRichPresence():
 						self.SetPresence(site.capitalize(), url, site+"_", title)
 						break
 
-	def SetPresence(self, site, url, image, image_text):
-		print("Image: {0}\nSite: {1}\nURL: {2}\n".format(image, site, url))
-		start_time = time.time()
-		while True:
-			activity = {
-					"state": url,
-					"details": site,
-					"timestamps": {
-						"start": start_time
-					},
-					"assets": {
-						"small_text": image_text,
-						"small_image": image,
-						"large_text": site,
-						"large_image": image
-					}
-				}
-			self.rpc_obj.set_activity(activity)
-			time.sleep(self.update_freq)
-			self.GetTabs()
+	def SetPresence(self, site, url, image, title):
+		if len(site) + len(title) + 3 > 128:
+			title = title[:125-(len(site)+3)] + "..."
+			# If the "details" variable below goes over 128 characters total, Discord won't update rich presence
+			# So we need to limit the number of characters which will be formatted like so: 
+			# Twitter | Vsauce on Twitter: "The English language @Wikipedia as it existed on 7 April 2015 can be yours in hardcover form th..."
+			# +3 compensates for the space between "Site | Title" which allows us to put "..." at the end if it's too long.
+
+		activity = {
+			"state": url,
+			"details": "{0} | {1}".format(site, title),
+			"timestamps": {
+			"start": self.start_time
+			},
+			"assets": {
+			"small_text": title,
+			"small_image": image,
+			"large_text": site,
+			"large_image": image
+			}
+		}
+		self.rpc_obj.set_activity(activity)
+		time.sleep(self.update_freq)
+		self.GetTabs()
 
 FirefoxRichPresence()
