@@ -26,8 +26,21 @@ To make it show ANY site you simply replace function `GetTabs()` with:
 				self.SetPresence(site.capitalize(), url, "", title)
 				break
 ```
+This is what is being replaced:
+```python
+sites = ["twitter","facebook"] # Deleted line
 
-To change images depending on what site you're on, you simply find the images that you want, and add it as an asset for your [application](https://discordapp.com/developers/applications/)
+	...
+		for site in sites: 	 # Deleted line
+			if site in url:	 # Deleted line
+				self.SetPresence(site.capitalize(), url, "", title) # Fixed indent
+				break 						    # Fixed indent
+```
+
+----
+
+### Rich Presence image:
+To change images depending on what site you're on, you simply find the images that you want, and add it as an asset for your [application](https://discordapp.com/developers/applications/).
 Currently it's set to display `whateverTheSiteTitleIs_` (with an underscore at the end). So when I have Twitter open it uses image asset `"twitter_"`. If the image does not exist it will not show an error, but no image will be shown in rich presence.
 
 ----
@@ -37,5 +50,5 @@ The variable `self.update_freq` in the  `__init__` function specifies how long i
 
 ----
 
-### rpc.py
-The repo contains file `rpc.py` forked by [Suclearnub](https://github.com/suclearnub/python-discord-rpc) from the original [Snazzah](https://github.com/Snazzah/SublimeDiscordRP).
+### Credit:
+The repo contains file `rpc.py` forked by [Suclearnub](https://github.com/suclearnub/python-discord-rpc) from ["Sublime Discord Rich Presence"](https://github.com/Snazzah/SublimeDiscordRP) made by [Snazzah](https://github.com/Snazzah).
