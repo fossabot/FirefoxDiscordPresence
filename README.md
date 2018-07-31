@@ -1,5 +1,8 @@
 ## FirefoxDiscordPresence
 Show currently open websites in Discord using Rich Presence
+![Twitter Rich Presence](https://i.imgur.com/sy7JALQ.png)
+![Reddit Rich Presence](https://i.imgur.com/aCFSMP5.png)
+![Twitter Rich Presence Image](https://i.imgur.com/QwsKCiK.png)
 
 ### Requirements:
 * lz4 (You can install it by using: `pip install lz4`)
