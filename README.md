@@ -1,5 +1,6 @@
 ## FirefoxDiscordPresence
-Show currently open websites in Discord using Rich Presence
+**Show currently open websites in Discord using Rich Presence**    
+
 ![Twitter Rich Presence](https://i.imgur.com/sy7JALQ.png)
 ![Reddit Rich Presence](https://i.imgur.com/aCFSMP5.png)
 ![Twitter Rich Presence Image](https://i.imgur.com/QwsKCiK.png)
@@ -49,7 +50,8 @@ Currently it's set to display `whateverTheSiteTitleIs_` (with an underscore at t
 ----
 
 ### Update time:
-The variable `self.update_freq` in the  `__init__` function specifies how long it takes before it will see currently open sites again. You can adjust it to your liking if you want it to update more/less frequently.
+The variable `self.update_freq` in the  `__init__` function specifies how long it takes before it will see currently open sites again. You can adjust it to your liking if you want it to update more/less frequently.   
+***NOTE: Firefox tab data takes time to update, so it might not be accurate instantaneously***
 
 ----
 
