@@ -29,6 +29,9 @@ class FirefoxRichPresence():
 					if site in url:
 						self.SetPresence(site.capitalize(), url, site+"_", title)
 						break
+						
+		time.sleep(self.update_freq)
+		self.GetTabs()
 
 	def SetPresence(self, site, url, image, title):
 		if len(site) + len(title) + 3 > 128:
